@@ -52,13 +52,6 @@ insert into Venue ( name, city, country, street, description, mediaitem_id, capa
 
 -- Section 1
 insert into Section ( name, description, numberofrows, rowcapacity, venue_id) values ( 'A', 'Premier platinum reserve',20, 100, 1);
--- Section 2
-insert into Section ( name, description, numberofrows, rowcapacity, venue_id) values ( 'B', 'Premier gold reserve', 20, 100, 1);
--- Section 3
-insert into Section ( name, description, numberofrows, rowcapacity, venue_id) values ( 'C', 'Premier silver reserve', 30, 100, 1);
--- section 4
-insert into Section ( name, description, numberofrows, rowcapacity, venue_id) values ( 'D', 'General', 40, 100, 1);
-
 
 -- EventCategory 1
 insert into EventCategory ( description) values ( 'Concert');
@@ -78,8 +71,6 @@ insert into TicketCategory ( description) values ( 'Child 0-14yrs');
 
 -- Event 1
 insert into Event ( name, description, mediaitem_id, category_id) values ( 'Rock concert of the decade', 'Get ready to rock your night away with this megaconcert extravaganza from 10 of the biggest rock stars of the 80''s', 24, 1);
--- Event 2
-insert into Event ( name, description, mediaitem_id, category_id) values ( 'Shane''s Sock Puppets', 'This critically acclaimed masterpiece will take you on an emotional rollercoaster the likes of which you''ve never experienced.', 24, 2);
 
 -- Show 1
 insert into Appearance ( event_id, venue_id) values ( 1, 1);
@@ -89,56 +80,8 @@ insert into Performance ( show_id, date) values ( 1, '2018-01-24 19:00:00');
 
 -- SectionAllocation 1
 insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (1, 1, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (1, 2, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (1, 3, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (1, 4, null, 0, 1);
 
 -- Performance 2
 insert into Performance ( show_id, date) values ( 1, '2018-01-25 19:00:00');
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (2, 1, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (2, 2, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (2, 3, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (2, 4, null, 0, 1);
-
--- Show 2
-insert into Appearance ( event_id, venue_id) values ( 1, 1);
-
--- Performance 3
-insert into Performance ( show_id, date) values ( 2, '2018-01-26 19:30:00');
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (3, 5, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (3, 6, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (3, 7, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (3, 8, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (3, 9, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (3, 10, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (3, 11, null, 0, 1);
-
--- Performance #4
-insert into Performance ( show_id, date) values ( 2, '2018-01-27 19:30:00');
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (4, 5, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (4, 6, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (4, 7, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (4, 8, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (4, 9, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (4, 10, null, 0, 1);
-insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (4, 11, null, 0, 1);
 
 insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (1, 1, 1, 219.50);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (1, 2, 1, 199.50);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (1, 3, 1, 179.50);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (1, 4, 1, 149.50);
-
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (2, 5, 1, 167.75);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (2, 6, 1, 197.75);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (2, 7, 1, 167.75);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (2, 8, 1, 155.0);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (2, 9, 1, 155.0);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (2, 10, 1, 155.0);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (2, 11, 1, 122.5);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (2, 5, 2, 157.50);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (2, 6, 2, 187.50);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (2, 7, 2, 157.50);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (2, 8, 2, 145.0);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (2, 9, 2, 145.0);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (2, 10, 2, 145.0);
-insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (2, 11, 2, 112.5);
