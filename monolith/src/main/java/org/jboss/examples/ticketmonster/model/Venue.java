@@ -81,10 +81,12 @@ public class Venue implements Serializable {
      * attribute establishes this. We cascade all persistence operations to the set of performances, so, for example if a venue
      * is removed, then all of it's sections will also be removed.
      * </p>
-     */
+     *
+     * **** Commented this out trying to debug a recursive relationship with Venue/Section
+     
     @OneToMany(cascade = ALL, fetch = EAGER, mappedBy = "venue")
     private Set<Section> sections = new HashSet<Section>();
-
+     */
     /**
      * The capacity of the venue
      */
