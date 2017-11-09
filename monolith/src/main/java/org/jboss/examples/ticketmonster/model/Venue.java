@@ -140,6 +140,7 @@ public class Venue implements Serializable {
         this.description = description;
     }
 
+    /* Removed Sections for Debugging
     public Set<Section> getSections() {
         return sections;
     }
@@ -147,6 +148,7 @@ public class Venue implements Serializable {
     public void setSections(Set<Section> sections) {
         this.sections = sections;
     }
+    */
 
     public int getCapacity() {
         return capacity;
