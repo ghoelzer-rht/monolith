@@ -61,7 +61,10 @@ public class VenueEndpoint
    @Produces("application/json")
    public Response findById(@PathParam("id") Long id)
    {
+      /* Original Query
       TypedQuery<Venue> findByIdQuery = em.createQuery("SELECT DISTINCT v FROM Venue v LEFT JOIN FETCH v.sections LEFT JOIN FETCH v.mediaItem WHERE v.id = :entityId ORDER BY v.id", Venue.class);
+      */
+      TypedQuery<Venue> findByIdQuery = em.createQuery("SELECT DISTINCT v FROM Venue WHERE v.id = :entityId ORDER BY v.id", Venue.class);
       findByIdQuery.setParameter("entityId", id);
       Venue entity;
       try
