@@ -84,4 +84,7 @@ insert into SectionAllocation(performance_id, section_id, allocated, occupiedcou
 -- Performance 2
 insert into Performance ( show_id, date) values ( 1, '2018-01-25 19:00:00');
 
+-- SectionAllocation 2
+insert into SectionAllocation(performance_id, section_id, allocated, occupiedcount, version) values (2, 1, null, 0, 1);
+
 insert into TicketPrice ( show_id, section_id, ticketcategory_id, price) values (1, 1, 1, 219.50);
