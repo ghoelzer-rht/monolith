@@ -52,12 +52,14 @@ public class VenueDTO implements Serializable
          this.address = new AddressDTO(entity.getAddress());
          this.mediaItem = new NestedMediaItemDTO(entity.getMediaItem());
          this.description = entity.getDescription();
+	 /* Debugging Section
          Iterator<Section> iterSections = entity.getSections().iterator();
          while (iterSections.hasNext())
          {
             Section element = iterSections.next();
             this.sections.add(new NestedSectionDTO(element));
          }
+	 */
          this.capacity = entity.getCapacity();
       }
    }
@@ -79,6 +81,7 @@ public class VenueDTO implements Serializable
                em));
       }
       entity.setDescription(this.description);
+      /* Debugging Section
       Iterator<Section> iterSections = entity.getSections().iterator();
       while (iterSections.hasNext())
       {
@@ -95,6 +98,7 @@ public class VenueDTO implements Serializable
                break;
             }
          }
+	
          if (found == false)
          {
             iterSections.remove();
@@ -145,6 +149,7 @@ public class VenueDTO implements Serializable
             }
          }
       }
+      */
       entity.setCapacity(this.capacity);
       entity = em.merge(entity);
       return entity;
